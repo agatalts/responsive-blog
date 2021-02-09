@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,800italic,400,600,700,800);
 
 body {
-  background-color: #d5d9cb;
+  background-color: #e7eae2;
   text-align: center;
   font-family: "Open Sans", sans-serif;
   color: #565d62;
@@ -10,17 +10,25 @@ body {
 
 h1 {
   font-size: 22px;
-  color: #ece2db;
+  color: #e7eae2;
   background-color: rgba(213, 217, 203, 0.3);
   border-radius: 3px;
   padding: 8px;
 }
 
-h3 {
+h2 {
   font-size: 20px;
   margin: 12px 0 0 0;
   text-align: left;
   padding-left: 20px;
+}
+
+h3 {
+  font-size: 14px;
+}
+
+h4 {
+  margin: 0 auto;
 }
 
 .profile-picture {
@@ -39,7 +47,7 @@ h3 {
 
 .container {
   display: grid;
-  grid-template-rows: 150px 30px auto 50px;
+  grid-template-rows: 150px 30px auto auto;
   gap: 5px;
   grid-template-areas:
     "hd hd hd hd"
@@ -71,6 +79,10 @@ h3 {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
+.card:hover {
+  box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.2);
+}
+
 .waterfall-photo {
   width: 100%;
   border-radius: 5px 5px 0 0;
@@ -86,10 +98,18 @@ h3 {
 
 .button-description {
   border: 1px solid #565d62;
+  border-radius: 3px;
   background-color: transparent;
   color: #565d62;
   padding: 8px 45px 8px 45px;
   margin-bottom: 20px;
+  transition: all 220ms ease-in-out;
+}
+
+.button-description:hover {
+  border: 1px solid #565d62;
+  background-color: #c6c9c2;
+  color: #565d62;
 }
 
 .navigation {
@@ -98,7 +118,7 @@ h3 {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  padding: 10px;
+  padding: 10px 0 20px 0;
   border-radius: 5px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
@@ -107,13 +127,36 @@ h3 {
   display: none;
 }
 
-.footer {
+footer {
   grid-area: ft;
+  text-align: center;
 }
 
 .nav-item {
   margin: 0 auto;
   font-size: 14px;
+}
+
+.media-icons {
+  width: 150px;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.media-icon {
+  width: 30px;
+  margin-top: 10px;
+}
+
+.github-link {
+  color: #90928d;
+  text-decoration: none;
+}
+
+.github-link:hover {
+  color: #777974;
 }
 
 @media (min-width: 650px) and (max-width: 899px) {
@@ -122,7 +165,7 @@ h3 {
   }
 
   .container {
-    grid-template-rows: 230px 30px auto 50px;
+    grid-template-rows: 230px 30px auto auto;
   }
   .content {
     display: grid;
@@ -141,7 +184,7 @@ h3 {
     max-width: 1500px;
     margin: 0 auto;
     display: grid;
-    grid-template-rows: 350px auto 50px;
+    grid-template-rows: 350px auto auto;
     grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
     gap: 5px;
     grid-template-areas:
@@ -171,6 +214,10 @@ h3 {
     border-radius: 5px;
     padding: 0;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .navigation:hover {
+    box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.2);
   }
 
   .card {
