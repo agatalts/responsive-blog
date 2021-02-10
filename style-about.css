@@ -1,0 +1,263 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,800italic,400,600,700,800);
+
+body {
+  background-color: #e7eae2;
+  text-align: center;
+  font-family: "Open Sans", Arial, sans-serif;
+  color: #565d62;
+  margin: 0;
+}
+
+h1 {
+  font-size: 22px;
+  color: #e7eae2;
+  background-color: rgba(213, 217, 203, 0.3);
+  border-radius: 3px;
+  padding: 8px;
+}
+
+h2 {
+  font-size: 20px;
+  margin: 12px 0 0 0;
+  text-align: left;
+  padding-left: 20px;
+}
+
+h3 {
+  font-size: 16px;
+  margin: 15px auto;
+}
+
+h4 {
+  font-size: 14px;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 150px 30px auto auto;
+  gap: 5px;
+  grid-template-areas:
+    "hd hd hd hd"
+    "nav nav nav nav"
+    "cont cont cont cont"
+    "ft ft ft ft";
+}
+
+header {
+  grid-area: hd;
+  background-image: url(img/header6.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+article {
+  grid-area: cont;
+}
+
+.card {
+  padding-top: 15px;
+  width: 85%;
+  margin: 20px auto;
+  border-radius: 5px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+  box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.2);
+}
+
+.about-me-card {
+  margin: 0 auto;
+  font-size: 14px;
+  text-align: justify;
+  padding: 20px;
+  line-height: 23px;
+}
+
+.profile-picture-about {
+  width: 200px;
+  height: 200px;
+  background-image: url(img/profile.jpg);
+  border-radius: 50%;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+.photo-about {
+  width: 100%;
+}
+
+figcaption {
+  font-size: 13px;
+  text-align: left;
+  padding-bottom: 30px;
+}
+
+nav {
+  grid-area: nav;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 14px;
+  padding: 10px 0 12px 0;
+  border-radius: 5px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.profile-picture {
+  width: 200px;
+  height: 200px;
+  background-image: url(img/profile.jpg);
+  border-radius: 50%;
+  background-size: cover;
+  margin-top: 15px;
+}
+
+.about-me-description {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+.about-me-detailed {
+  display: none;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #565d62;
+  font-weight: 600;
+}
+
+.nav-item:hover {
+  font-weight: 700;
+}
+
+footer {
+  grid-area: ft;
+  text-align: center;
+}
+
+.media-icons {
+  width: 150px;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.media-icon {
+  width: 30px;
+  margin-top: 10px;
+}
+
+.github-link {
+  color: #565d62;
+  text-decoration: underline;
+}
+
+.github-link:hover {
+  color: #565d62;
+}
+
+@media (min-width: 650px) and (max-width: 899px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  .container {
+    grid-template-rows: 230px 30px auto auto;
+  }
+
+  article {
+    grid-area: cont;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 5px;
+  }
+
+  .card {
+    width: 85%;
+  }
+}
+
+@media (min-width: 900px) {
+  h1 {
+    font-size: 70px;
+  }
+  .container {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 350px auto auto;
+    grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+    grid-template-areas:
+      "hd hd hd hd hd"
+      ". cont cont nav ."
+      "ft ft ft ft ft";
+  }
+
+  header {
+    max-width: 1500px;
+  }
+
+  article {
+    max-width: 1500px;
+    width: 92%;
+    margin: 0 auto;
+    grid-area: cont;
+    align-items: stretch;
+    justify-content: stretch;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .profile-picture-about {
+    display: none;
+  }
+
+  nav {
+    width: 85%;
+    margin: 20px auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 5px;
+    padding: 0;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  nav:hover {
+    box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .about-me-detailed {
+    display: block;
+    margin-bottom: 50px;
+  }
+
+  .nav-item {
+    display: block;
+    font-size: 16px;
+    margin: 20px auto;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1150px) {
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+  }
+}
