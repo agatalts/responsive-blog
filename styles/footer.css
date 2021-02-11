@@ -1,0 +1,26 @@
+footer {
+  grid-area: ft;
+  text-align: center;
+}
+
+.media-icons {
+  width: 150px;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.media-icon {
+  width: 30px;
+  margin-top: 10px;
+}
+
+.github-link {
+  color: #565d62;
+  text-decoration: underline;
+}
+
+.github-link:hover {
+  color: #565d62;
+}

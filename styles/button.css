@@ -1,0 +1,16 @@
+.button-description {
+  border: 1px solid #565d62;
+  border-radius: 3px;
+  background-color: transparent;
+  color: #565d62;
+  padding: 8px 45px 8px 45px;
+  margin-bottom: 20px;
+  transition: all 220ms ease-in-out;
+}
+
+.button-description:hover {
+  border: 1px solid #565d62;
+  background-color: #c6c9c2;
+  color: #565d62;
+  cursor: pointer;
+}

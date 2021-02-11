@@ -1,0 +1,30 @@
+.profile-picture {
+  width: 200px;
+  height: 200px;
+  background-image: url(../img/profile.jpg);
+  border-radius: 50%;
+  background-size: cover;
+  margin-top: 15px;
+}
+
+.profile-picture-about {
+  width: 200px;
+  height: 200px;
+  background-image: url(../img/profile.jpg);
+  border-radius: 50%;
+  background-size: cover;
+  margin: 0 auto 35px;
+}
+
+@media (min-width: 900px) {
+  .profile-picture-about {
+    display: none;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1150px) {
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+  }
+}
